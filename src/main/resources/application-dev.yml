@@ -1,0 +1,20 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: crs
+  datasource:
+    name: crs-db-cp
+    url: jdbc:mysql://localhost:3306/crs?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis:
+  type-aliases-package: com.derivex.common.data.entry
+  configuration:
+    map-underscore-to-camel-case: true
